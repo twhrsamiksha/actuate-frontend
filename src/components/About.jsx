@@ -102,12 +102,12 @@ export default function About() {
               {/* Stats */}
               <div className="mt-10 flex gap-8">
                 <div>
-                  <div className="text-3xl font-bold text-primary">400+</div>
+                  <div className="text-3xl font-bold text-primary">430+</div>
                   <div className="text-sm text-gray-600 mt-1">Courses</div>
                 </div>
                 <div className="border-l-2 border-gray-200"></div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">1000+</div>
+                  <div className="text-3xl font-bold text-primary">1800+</div>
                   <div className="text-sm text-gray-600 mt-1">Micro videos</div>
                 </div>
                 <div className="border-l-2 border-gray-200"></div>
