@@ -1,34 +1,38 @@
 import React from "react";
-import { Play, Mic, Clock, Sparkles, ArrowRight } from "lucide-react";
+import { BookOpen, Clock, Sparkles, ArrowRight, Calendar } from "lucide-react";
 
-const podcasts = [
+const blogs = [
   {
     title: "Leadership in the Digital Age",
-    duration: "28 min",
+    readTime: "8 min read",
     description: "Learn how modern leaders are adapting to digital transformation.",
-    image: "/assets/podcast1.png"
+    image: "/assets/podcast1.png",
+    date: "Oct 15, 2025"
   },
   {
     title: "Building High-Performance Teams",
-    duration: "35 min",
+    readTime: "12 min read",
     description: "Strategies to create and manage successful teams in any industry.",
-    image: "/assets/podcast2.jpg"
+    image: "/assets/podcast2.jpg",
+    date: "Oct 10, 2025"
   },
   {
     title: "The Art of Effective Communication",
-    duration: "22 min",
+    readTime: "6 min read",
     description: "Master the skills that drive meaningful workplace conversations.",
-    image: "/assets/podcast3.png"
+    image: "/assets/podcast3.png",
+    date: "Oct 5, 2025"
   },
   {
     title: "Innovation & Creative Thinking",
-    duration: "31 min",
+    readTime: "10 min read",
     description: "Unlock your creative potential and drive innovation at work.",
-    image: "/assets/podcast4.jpg"
+    image: "/assets/podcast4.jpg",
+    date: "Sep 28, 2025"
   }
 ];
 
-export default function Podcast() {
+export default function Blogs() {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 relative overflow-hidden">
       {/* Decorative background */}
@@ -39,24 +43,24 @@ export default function Podcast() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-3">
-            <Mic className="w-4 h-4" />
-            <span>Audio Learning</span>
+            <BookOpen className="w-4 h-4" />
+            <span>Insights & Articles</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-            Discover Our <span className="text-primary">Podcasts</span>
+              Discover Our <span className="text-primary">Blogs</span>
           </h2>
           
           <div className="w-20 h-1 bg-primary rounded-full mx-auto mb-4"></div>
           
           <p className="text-gray-600 text-base max-w-2xl mx-auto">
-            Learn on the go with expert insights, industry trends, and practical tips delivered through engaging audio content.
+            Explore our blogs to elevate your learning and development journey.
           </p>
         </div>
 
-        {/* Podcast Grid */}
+        {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          {podcasts.map((podcast, i) => (
+          {blogs.map((blog, i) => (
             <div 
               key={i}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-gray-100"
@@ -65,37 +69,36 @@ export default function Podcast() {
                 {/* Image Section */}
                 <div className="sm:w-48 h-48 sm:h-auto relative overflow-hidden flex-shrink-0">
                   <img 
-                    src={podcast.image}
-                    alt={podcast.title}
+                    src={blog.image}
+                    alt={blog.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   
-                  {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-primary rounded-full p-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                      <Play className="w-6 h-6 text-white fill-white" />
-                    </div>
-                  </div>
-
-                  {/* Duration Badge */}
+                  {/* Read Time Badge */}
                   <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-xs font-semibold text-gray-800">{podcast.duration}</span>
+                    <span className="text-xs font-semibold text-gray-800">{blog.readTime}</span>
                   </div>
                 </div>
 
                 {/* Content Section */}
                 <div className="flex-1 p-6">
+                  {/* Date */}
+                  <div className="flex items-center gap-1.5 text-gray-500 text-xs mb-2">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span>{blog.date}</span>
+                  </div>
+                  
                   <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors duration-300">
-                    {podcast.title}
+                    {blog.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    {podcast.description}
+                    {blog.description}
                   </p>
                   
                   <button className="text-primary font-semibold text-sm flex items-center gap-2 group/btn">
-                    <span>Listen Now</span>
+                    <span>Read More</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
@@ -108,7 +111,7 @@ export default function Podcast() {
         <div className="text-center">
           <button className="bg-white text-primary font-semibold px-8 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
             <Sparkles className="w-5 h-5" />
-            <span>View All Podcasts</span>
+            <span>View All Blogs</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
         </div>

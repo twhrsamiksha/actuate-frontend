@@ -10,6 +10,8 @@ const courses = [
   { title: "Leadership Skills", img: "/assets/course2.jpg" },
   { title: "Technical Skills", img: "/assets/course3.jpg" },
   { title: "Cognitive Skills", img: "/assets/course4.jpg" },
+  { title: "HR and Compliance", img: "/assets/course5.jpg" },
+  { title: "Digital Skills", img: "/assets/course6.jpg" }
 ];
 
 export default function Courses() {

@@ -70,11 +70,11 @@ export default function About() {
                 <span>About Us</span>
               </div>
               
-              <h2 className="text-5xl font-bold text-gray-800 leading-tight">
+              <h2 className="text-3xl md:text-4xl  font-bold text-gray-800 leading-tight">
                 Actuate <span className="text-primary">Microlearning</span>
               </h2>
               
-              <p className="italic text-lg text-gray-600 mt-3 font-medium">
+              <p className="text-2xl md:text-2xl text-lg text-gray-600 mt-3 font-medium">
                 India's First Live-Action Video Microlearning
               </p>
               
@@ -102,18 +102,18 @@ export default function About() {
               {/* Stats */}
               <div className="mt-10 flex gap-8">
                 <div>
-                  <div className="text-3xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-gray-600 mt-1">Microlessons</div>
+                  <div className="text-3xl font-bold text-primary">400+</div>
+                  <div className="text-sm text-gray-600 mt-1">Courses</div>
                 </div>
                 <div className="border-l-2 border-gray-200"></div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">100K+</div>
-                  <div className="text-sm text-gray-600 mt-1">Learners</div>
+                  <div className="text-3xl font-bold text-primary">1000+</div>
+                  <div className="text-sm text-gray-600 mt-1">Micro videos</div>
                 </div>
                 <div className="border-l-2 border-gray-200"></div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-gray-600 mt-1">Companies</div>
+                  <div className="text-3xl font-bold text-primary">150+</div>
+                  <div className="text-sm text-gray-600 mt-1">Hours of Content</div>
                 </div>
               </div>
             </div>

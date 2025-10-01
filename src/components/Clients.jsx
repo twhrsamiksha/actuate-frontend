@@ -5,37 +5,67 @@ import "swiper/css";
 
 const clientsBySector = {
   Pharmaceuticals: [
-    "/assets/logo-alembic.png",
-    "/assets/logo-biocon.png",
-    "/assets/logo-glenmark.png",
-    "/assets/logo-emcure.png",
-    "/assets/logo-zydus.png",
-    "/assets/logo-sunpharma.png",
-    "/assets/logo-cipla.png",
-    "/assets/logo-lupin.png"
+    "/assets/pharma1.png",
+    "/assets/pharma2.png",
+    "/assets/pharma3.png",
+    "/assets/pharma4.png",
+    "/assets/pharma5.png",
+    "/assets/pharma6.png",
+    "/assets/Pharma7.png",
   ],
-  Banking: [
-    "/assets/logo-hdfc.png",
-    "/assets/logo-icici.png",
-    "/assets/logo-axis.png",
-    "/assets/logo-sbi.png",
-    "/assets/logo-kotak.png",
-    "/assets/logo-yes.png"
+
+  Automotive, Manufacturing: [
+    "/assets/auto1.png",
+    "/assets/auto2.png",
+    "/assets/auto3.png",
+    "/assets/auto4.png",
+    "/assets/auto5.png",
+    "/assets/auto6.png",
+    "/assets/auto7.png",
   ],
-  IT: [
-    "/assets/logo-tcs.png",
-    "/assets/logo-infosys.png",
-    "/assets/logo-wipro.png",
-    "/assets/logo-hcl.png",
-    "/assets/logo-techm.png"
+
+  Consumer_Goods, Durables: [
+    "/assets/goods1.png",
+    "/assets/goods2.png",
+    "/assets/goods3.png",
+    "/assets/goods4.png",
+    "/assets/goods5.png",
+    "/assets/goods6.png",
+    "/assets/goods7.png",
   ],
-  Manufacturing: [
-    "/assets/logo-tata.png",
-    "/assets/logo-mahindra.png",
-    "/assets/logo-reliance.png",
-    "/assets/logo-larsen.png",
-    "/assets/logo-godrej.png"
-  ]
+
+  IT, ITES, eCommerce, Retail: [
+    "/assets/IT1.png",
+    "/assets/IT2.png",
+    "/assets/IT3.png",
+    "/assets/IT4.png",
+    "/assets/IT5.png",
+    "/assets/IT6.png",
+    "/assets/IT7.png",
+  ],
+
+  Public_Sector, Petrochemical, Infra: [
+    "/assets/public1.png",
+    "/assets/public2.png",
+    "/assets/public3.png",
+    "/assets/public4.png",
+    "/assets/public5.png",
+  ],
+
+  Others: [
+    "/assets/others1.png",
+    "/assets/others2.png",
+    "/assets/others3.png",
+    "/assets/others4.png",
+    "/assets/others5.png",
+    "/assets/others6.png",
+    "/assets/others7.png",
+    "/assets/others8.png",
+    "/assets/others9.png",
+    "/assets/others10.png",
+    "/assets/others11.png",
+  ],
+
 };
 
 export default function Clients() {

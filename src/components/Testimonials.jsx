@@ -7,49 +7,34 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    text: "The content I feel was really impactful, didn't beat about the bush and got straight to the point. The scenarios were relatable and very applicable.",
-    author: "John Smith, Senior VP",
-    company: "Alembic Pharmaceuticals"
+    text: "Actuate's content is 100 times better than other Indian companies' content. Foreign companies' content do not allow personalization for Indian learners.",
+    author: "Supriya Kamble",
+    company: "Corporate HR Manager",
+    image: "/assets/testimonials/01. Supriya Kamble.png"
   },
   {
-    text: "Using lessons I learned I managed to nail a presentation that was given to me on very short notice, which I personally managed to convince management to use lessons learned and apply new processes resulting in 2% and significant cost reductions within thirty days.",
-    author: "Ritu Sharma",
-    company: "Biocon Limited"
+    text: "...international standards... fun filled and entertaining... keep learners hooked... wonderful... innovative.",
+    author: "Amitabh Bhagchandani",
+    company: "eLearning Specialist",
+    image: "/assets/testimonials/02. Amitabh Bhagchandani.png"
   },
   {
-    text: "Lessons learned...have become a part of my team's playbook. The bite-sized nature was perfect for our busy schedules while staying relevant and easy to use.",
-    author: "Amit Shukla",
-    company: "Glenmark"
+    text: "There have been many service provider today into this space but Actuate offerings stand apart in terms of their repository and their innovative presentation of their content.",
+    author: "Anil Nair",
+    company: "Head Talent Management",
+    image: "/assets/testimonials/03. Anil Nair.png"
   },
   {
-    text: "The microlearning format was perfect for our team. We could complete modules during breaks and the knowledge retention was significantly higher than traditional training.",
-    author: "Priya Desai, HR Director",
-    company: "Sun Pharma"
-  },
-  {
-    text: "Real-world scenarios and practical examples made the training immediately applicable. Our team saw measurable improvements in performance within weeks.",
-    author: "Rajesh Kumar",
-    company: "Dr. Reddy's Laboratories"
-  },
-  {
-    text: "The video-first approach kept our team engaged. The production quality and relatable content made learning enjoyable rather than a chore.",
-    author: "Sneha Patel, Learning Manager",
-    company: "Cipla"
-  },
-  {
-    text: "We've tried multiple eLearning platforms, but Actuate's focus on bite-sized, actionable content has delivered the best ROI for our training budget.",
-    author: "Vikram Singh, COO",
-    company: "Lupin Pharmaceuticals"
-  },
-  {
-    text: "The mobile-first design meant our field teams could learn on-the-go. Completion rates increased by 85% compared to our previous training program.",
-    author: "Meera Iyer, Sales Director",
-    company: "Torrent Pharmaceuticals"
+    text: "Among the other players... national and international... the relevance of courses and approach... eased our decision making.",
+    author: "Ajitha S",
+    company: "HR Corporate",
+    image: "/assets/testimonials/04. Ajitha S.png"
   }
 ];
 
 export default function Testimonials() {
   const [expandedCard, setExpandedCard] = useState(null);
+  const [imageErrors, setImageErrors] = useState({});
   const swiperRef = useRef(null);
 
   const handleCardClick = (index) => {
@@ -69,6 +54,10 @@ export default function Testimonials() {
     if (swiperRef.current && swiperRef.current.autoplay && expandedCard === null) {
       swiperRef.current.autoplay.start();
     }
+  };
+
+  const handleImageError = (index) => {
+    setImageErrors(prev => ({ ...prev, [index]: true }));
   };
 
   return (
@@ -166,9 +155,20 @@ export default function Testimonials() {
                         )}
                         
                         <div className="mt-6 flex items-center gap-3 pt-4 border-t border-gray-100">
-                          {/* Avatar circle */}
-                          <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-all duration-300 shadow-lg flex-shrink-0">
-                            {item.author[0]}
+                          {/* Avatar with fallback */}
+                          <div className="w-12 h-12 rounded-full overflow-hidden group-hover:scale-110 transition-all duration-300 shadow-lg flex-shrink-0 ring-2 ring-primary/20 group-hover:ring-primary">
+                            {item.image && !imageErrors[i] ? (
+                              <img 
+                                src={item.image} 
+                                alt={item.author}
+                                className="w-full h-full object-cover"
+                                onError={() => handleImageError(i)}
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-primary flex items-center justify-center text-white font-bold text-lg">
+                                {item.author[0]}
+                              </div>
+                            )}
                           </div>
                           <div>
                             <h4 className="font-bold text-gray-800 text-sm group-hover:text-primary transition-colors duration-300">{item.author}</h4>

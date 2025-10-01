@@ -1,5 +1,5 @@
 import React from "react";
-import { Ruler, Video, Smartphone, Volume2, Sparkles } from "lucide-react";
+import { Ruler, Video, Smartphone, Volume2, Sparkles, ArrowRight } from "lucide-react";
 
 const modernFeatures = [
   { 
@@ -50,17 +50,27 @@ export default function ModernLearner() {
           </p>
         </div>
 
-        <div className="md:flex items-center gap-16">
-          {/* Left - Image with Decoration */}
-          <div className="md:w-1/2 flex justify-center mb-8 md:mb-0 relative">
-            {/* Decorative background */}
-            <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl scale-75"></div>
+        <div className="md:flex items-start gap-16">
+          {/* Left - Image with Button */}
+          <div className="md:w-1/2 mb-8 md:mb-0 mt-12">
+            <div className="relative flex justify-center">
+              {/* Decorative background */}
+              <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl scale-75"></div>
+              
+              <img 
+                src="/assets/modern-learner.png" 
+                alt="Modern learner illustration" 
+                className="w-full max-w-md object-contain relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+              />
+            </div>
             
-            <img 
-              src="/assets/modern-learner.png" 
-              alt="Modern learner illustration" 
-              className="w-full max-w-md object-contain relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-            />
+            {/* Know More Button - Center aligned below image */}
+            <div className="flex justify-center mt-20">
+              <button className="bg-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-red-600 hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+                <span>Know More</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
+            </div>
           </div>
 
           {/* Right - Features with Timeline */}
