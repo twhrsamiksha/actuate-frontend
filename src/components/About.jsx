@@ -1,23 +1,195 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { Play, Sparkles, X } from "lucide-react";
 
-export default function About(){
+export default function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const previewVideoRef = useRef(null);
+  const modalVideoRef = useRef(null);
+
+  // Auto-play preview video from 1:00 to 1:15 on loop
+  useEffect(() => {
+    const video = previewVideoRef.current;
+    if (video) {
+      video.currentTime = 60; // Start at 1:00 minute
+      video.play();
+
+      const handleTimeUpdate = () => {
+        if (video.currentTime >= 75) { // 1:15 = 75 seconds
+          video.currentTime = 60; // Loop back to 1:00
+          video.play();
+        }
+      };
+
+      video.addEventListener('timeupdate', handleTimeUpdate);
+      return () => video.removeEventListener('timeupdate', handleTimeUpdate);
+    }
+  }, []);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    // Pause preview video when modal opens
+    if (previewVideoRef.current) {
+      previewVideoRef.current.pause();
+    }
+    // Play full video from beginning
+    setTimeout(() => {
+      if (modalVideoRef.current) {
+        modalVideoRef.current.currentTime = 0;
+        modalVideoRef.current.play();
+      }
+    }, 100);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    // Resume preview video
+    if (previewVideoRef.current) {
+      previewVideoRef.current.play();
+    }
+    // Pause modal video
+    if (modalVideoRef.current) {
+      modalVideoRef.current.pause();
+    }
+  };
+
   return (
-    <section className="bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-12 md:flex items-center gap-8">
-        <div className="md:w-1/2">
-          <h6 className="text-primary font-semibold uppercase">About Us</h6>
-          <h3 className="text-2xl md:text-3xl font-bold mt-2">Actuate Microlearning</h3>
-          <p className="italic mt-1 text-gray-600">India’s First Live-Action Video Microlearning</p>
-          <p className="mt-4 text-gray-700">Because we connect best with human — rather than animated — characters and facilitators in our learning content.</p>
-          <div className="mt-6 flex gap-4">
-            <button className="bg-primary text-white px-4 py-2 rounded">Request Demo</button>
-            <button className="bg-gray-100 px-4 py-2 rounded border">Know More</button>
+    <>
+      <section className="bg-gradient-to-b from-white to-gray-50 py-24 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-20 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="md:flex items-center gap-16">
+            
+            {/* Left Content */}
+            <div className="md:w-1/2">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <Sparkles className="w-4 h-4" />
+                <span>About Us</span>
+              </div>
+              
+              <h2 className="text-5xl font-bold text-gray-800 leading-tight">
+                Actuate <span className="text-primary">Microlearning</span>
+              </h2>
+              
+              <p className="italic text-lg text-gray-600 mt-3 font-medium">
+                India's First Live-Action Video Microlearning
+              </p>
+              
+              {/* Decorative line */}
+              <div className="w-20 h-1 bg-primary rounded-full mt-4"></div>
+              
+              <p className="mt-6 text-gray-700 leading-relaxed text-lg">
+                Because we connect best with <span className="font-semibold text-gray-900">human</span> — rather than animated — characters 
+                and facilitators in our learning content.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <button 
+                  onClick={openModal}
+                  className="bg-primary text-white px-7 py-3.5 rounded-lg font-semibold hover:bg-red-600 hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <Play size={20} className="group-hover:scale-110 transition-transform" />
+                  <span>View Video</span>
+                </button>
+                <button className="bg-white text-gray-800 px-7 py-3.5 rounded-lg font-semibold border-2 border-gray-300 hover:border-primary hover:text-primary hover:shadow-lg transition-all duration-300">
+                  Know More
+                </button>
+              </div>
+
+              {/* Stats */}
+              <div className="mt-10 flex gap-8">
+                <div>
+                  <div className="text-3xl font-bold text-primary">500+</div>
+                  <div className="text-sm text-gray-600 mt-1">Microlessons</div>
+                </div>
+                <div className="border-l-2 border-gray-200"></div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">100K+</div>
+                  <div className="text-sm text-gray-600 mt-1">Learners</div>
+                </div>
+                <div className="border-l-2 border-gray-200"></div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">50+</div>
+                  <div className="text-sm text-gray-600 mt-1">Companies</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Video Section - Preview */}
+            <div className="md:w-1/2 mt-12 md:mt-0 relative group">
+              {/* Decorative frame */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
+              
+              {/* Video container */}
+              <div className="relative cursor-pointer" onClick={openModal}>
+                <video 
+                  ref={previewVideoRef}
+                  className="rounded-2xl shadow-2xl w-full aspect-video object-cover relative z-10 group-hover:scale-[1.02] transition-transform duration-300"
+                  muted
+                  playsInline
+                  poster="/assets/about-thumb.jpg"
+                >
+                  <source src="/assets/about-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Play button overlay - Only visible on hover */}
+                <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-6 shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                    <Play className="w-8 h-8 text-primary fill-primary" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 z-20">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/10 rounded-full p-3">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-800">Live Action</div>
+                    <div className="text-xs text-gray-500">Real People, Real Impact</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
-          <img src="/assets/about-thumb.jpg" alt="about" className="rounded-xl shadow-card w-full max-w-sm object-cover"/>
+      </section>
+
+      {/* Video Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute -top-12 right-0 text-white hover:text-primary transition-colors"
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            {/* Full Video */}
+            <video
+              ref={modalVideoRef}
+              className="w-full rounded-2xl shadow-2xl"
+              controls
+              autoPlay
+            >
+              <source src="/assets/about-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 }

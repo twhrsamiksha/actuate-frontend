@@ -1,23 +1,60 @@
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Features from "./components/Features";
-import Courses from "./components/Courses";
-import Testimonials from "./components/Testimonials";
-import Clients from "./components/Clients";
 import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
+import HomePage from "./pages/HomePage";
+import ContactUs from "./pages/ContactUs";
 
-export default function App() {
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <div className="font-sans">
-      <Navbar />
-      <Hero />
-      <About />
-      <Features />
-      <Courses />
-      <Testimonials />
-      <Clients />
-      <Footer />
-    </div>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route 
+          path="/" 
+          element={
+            <PageTransition>
+              <HomePage />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/contact" 
+          element={
+            <PageTransition>
+              <ContactUs />
+            </PageTransition>
+          } 
+        />
+      </Routes>
+    </AnimatePresence>
   );
 }
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen">
+        <ScrollToTop />
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
