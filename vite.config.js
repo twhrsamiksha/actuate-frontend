@@ -13,12 +13,11 @@ export default defineConfig(({ command }) => {
           port: 5173,
           strictPort: true,
           allowedHosts: [
-            'actuatemicrolearning.com',
-            'www.actuatemicrolearning.com'
+            'actuatemicrolearning.com'
           ],
           proxy: {
             '/wp-json': {
-              target: 'https://www.actuatemicrolearning.com', // WordPress backend
+              target: 'https://actuatemicrolearning.com', // WordPress backend
               changeOrigin: true,
               secure: false,
             },
