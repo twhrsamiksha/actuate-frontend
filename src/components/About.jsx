@@ -29,38 +29,38 @@ export default function About() {
         {/* Decorative background elements */}
         <div className="absolute top-20 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="md:flex items-center gap-16">
-            
+
             {/* Left Content */}
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
                 Actuate <span className="text-primary">Microlearning</span>
               </h2>
-              
+
               <p className="text-2xl md:text-2xl text-lg text-gray-600 mt-3 font-medium">
                 India's First Live-Action Video Microlearning
               </p>
-              
+
               {/* Decorative line */}
               <div className="w-20 h-1 bg-primary rounded-full mt-4"></div>
-              
+
               <p className="mt-6 text-gray-700 leading-relaxed text-lg">
-                Because we connect best with <span className="font-semibold text-gray-900">human</span> — rather than animated — characters 
+                Because we connect best with <span className="font-semibold text-gray-900">human</span> — rather than animated — characters
                 and facilitators in our learning content.
               </p>
 
               {/* Buttons */}
               <div className="mt-8 flex flex-wrap gap-4">
-                <button 
+                <button
                   onClick={openModal}
                   className="bg-primary text-white px-7 py-3.5 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
                 >
                   <Play size={20} className="group-hover:scale-110 transition-transform" />
                   <span>View Video</span>
                 </button>
-                
+
                 {/* Premium Know More Button with Link */}
                 <Link to="/why-actuate">
                   <button className="bg-white text-primary font-semibold px-7 py-3.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-xl">
@@ -72,17 +72,17 @@ export default function About() {
 
               {/* Stats */}
               <div className="mt-10 flex gap-8">
-                <div>
+                <div className="shrink min-w-0">
                   <div className="text-3xl font-bold text-primary">430+</div>
                   <div className="text-sm text-gray-600 mt-1">Courses</div>
                 </div>
                 <div className="border-l-2 border-gray-200"></div>
-                <div>
+                <div className="shrink min-w-0">
                   <div className="text-3xl font-bold text-primary">1800+</div>
                   <div className="text-sm text-gray-600 mt-1">Micro videos</div>
                 </div>
                 <div className="border-l-2 border-gray-200"></div>
-                <div>
+                <div className="shrink min-w-0">
                   <div className="text-3xl font-bold text-primary">150+</div>
                   <div className="text-sm text-gray-600 mt-1">Hours of Content</div>
                 </div>
@@ -93,16 +93,16 @@ export default function About() {
             <div className="md:w-1/2 mt-12 md:mt-0 relative group">
               {/* Decorative frame */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
-              
+
               {/* GIF container */}
               <div className="relative cursor-pointer" onClick={openModal}>
                 {/* GIF IMAGE */}
-                <img 
+                <img
                   src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/about.gif"
                   alt="Actuate Microlearning Preview"
                   className="rounded-2xl shadow-2xl w-full aspect-video object-cover relative z-10 group-hover:scale-[1.02] transition-transform duration-300"
                 />
-                
+
                 {/* Play button overlay - Only visible on hover */}
                 <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/90 backdrop-blur-sm rounded-full p-6 shadow-2xl group-hover:scale-110 transition-transform duration-300">
@@ -131,7 +131,7 @@ export default function About() {
 
       {/* Video Modal */}
       {isModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={closeModal}
         >
