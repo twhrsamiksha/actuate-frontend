@@ -31,11 +31,6 @@ const courses = [
     title: "HR and Compliance", 
     img: "/app/assets/course5.jpg",
     link: "https://actuatemicrolearning.com/hr-compliance"
-  },
-  { 
-    title: "Digital Skills", 
-    img: "/app/assets/course6.jpg",
-    link: "https://actuatemicrolearning.com/digital-skills"
   }
 ];
 

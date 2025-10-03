@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Instagram, Facebook, X, Youtube, Sparkles } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Youtube, Sparkles } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -32,12 +32,12 @@ export default function Footer() {
               Resources
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Videos</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Slide Shows</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Infographics</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Flashcards</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Podcasts</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Audio Books</a></li>
+              <li><a href="https://actuatemicrolearning.com/videos-2/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Videos</a></li>
+              <li><a href="https://actuatemicrolearning.com/slideshows-2/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Slide Shows</a></li>
+              <li><a href="https://actuatemicrolearning.com/infographics-2/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Infographics</a></li>
+              <li><a href="https://actuatemicrolearning.com/flash-card/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Flashcards</a></li>
+              <li><a href="https://actuatemicrolearning.com/podcasts/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Podcasts</a></li>
+              <li><a href="https://actuatemicrolearning.com/audiobook/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Audio Books</a></li>
             </ul>
           </div>
 
@@ -48,11 +48,11 @@ export default function Footer() {
               Catalogue
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Soft Skills</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Managerial & Leadership</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Cognitive Skills</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Technical Skills</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">HR & Compliance</a></li>
+              <li><a href="https://actuatemicrolearning.com/soft-skills-2022/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Soft Skills</a></li>
+              <li><a href="https://actuatemicrolearning.com/leadership-skills-2/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Managerial & Leadership</a></li>
+              <li><a href="https://actuatemicrolearning.com/cognitive-skills-2/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Cognitive Skills</a></li>
+              <li><a href="https://actuatemicrolearning.com/technical-2022/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Technical Skills</a></li>
+              <li><a href="https://actuatemicrolearning.com/hr-2022/" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">HR & Compliance</a></li>
             </ul>
           </div>
 
@@ -63,9 +63,7 @@ export default function Footer() {
               About Us
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">About</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Testimonials</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">Demo</a></li>
+              <li><a href="https://actuatemicrolearning.com/actuate-about" className="hover:text-primary hover:translate-x-1 inline-block transition-all duration-200">About</a></li>
             </ul>
           </div>
         </div>
@@ -94,19 +92,16 @@ export default function Footer() {
 
             {/* Social Icons - Premium Style */}
             <div className="flex gap-3">
-              <a href="#" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
+              <a href="https://in.linkedin.com/company/actuate-microlearning" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
+              <a href="https://www.instagram.com/actuatemicrolearning/" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
+              <a href="https://www.facebook.com/actuatemicrolearning/" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
-                <X className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
+              <a href="https://www.youtube.com/@actuatemicrolearning" className="bg-gray-700 hover:bg-primary rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
