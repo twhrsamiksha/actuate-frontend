@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Globe, MapPin, Download, Phone, Play, CheckCircle, ArrowRight, X } from "lucide-react";
+import { Globe, MapPin, Phone, Play, CheckCircle, ArrowRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function IndianAudiencePage() {
@@ -63,7 +63,7 @@ export default function IndianAudiencePage() {
 
               {/* Video 1 - Global Content - Shows Video Preview */}
               <div 
-                onClick={() => openVideo("/assets/india1.mp4")}
+                onClick={() => openVideo("https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/india1.mp4")}
                 className="relative rounded-2xl overflow-hidden shadow-xl aspect-video mb-8 group cursor-pointer"
               >
                 <video
@@ -73,7 +73,7 @@ export default function IndianAudiencePage() {
                   autoPlay
                   playsInline
                 >
-                  <source src="/assets/india1.mp4" type="video/mp4" />
+                  <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/india1.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/60 transition-all"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -154,7 +154,7 @@ export default function IndianAudiencePage() {
 
               {/* Video 2 - Indian Content - Shows Video Preview */}
               <div 
-                onClick={() => openVideo("/assets/india2.mp4")}
+                onClick={() => openVideo("https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/india2.mp4")}
                 className="relative rounded-2xl overflow-hidden shadow-xl aspect-video mb-8 group cursor-pointer"
               >
                 <video
@@ -164,7 +164,7 @@ export default function IndianAudiencePage() {
                   autoPlay
                   playsInline
                 >
-                  <source src="/assets/india2.mp4" type="video/mp4" />
+                  <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/india2.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/60 transition-all"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -187,65 +187,28 @@ export default function IndianAudiencePage() {
             </div>
           </div>
 
-          {/* Catalogue CTA Section */}
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-4">
-                Explore Our Course Catalogue
-              </h2>
-              <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-                Our courses are the product of the many years of highly successful, customised classroom workshops that we have delivered to our clients. We've now packaged this content as video-based, micro e-learning offerings.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              
-              {/* Download Card */}
-              <div className="bg-gradient-to-br from-primary to-primary/90 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="relative">
-                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                    <Download className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">
-                    Download Catalogue
-                  </h3>
-                  <p className="text-white/90 mb-6 leading-relaxed">
-                    Get detailed information about all our courses and see how they're perfect for Indian learners.
-                  </p>
-                  <a 
-                    href="https://actuatemicrolearning.com/wp-content/uploads/2020/03/Actuate_Micro_Learning_Brochure_v2.pdf"
-                    download
-                    className="inline-block"
-                  >
-                    <button className="bg-white text-primary px-6 py-3.5 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg flex items-center gap-3 group">
-                      <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                      <span>Download Now</span>
-                    </button>
-                  </a>
+          {/* CTA Section - Call Back Only */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-primary to-primary/90 rounded-2xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+              <div className="relative text-center">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8" />
                 </div>
-              </div>
-
-              {/* Call Back Card */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-primary/50 transition-all shadow-sm hover:shadow-xl">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <Phone className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-secondary mb-3">
-                  Need Assistance?
+                <h3 className="text-2xl sm:text-3xl font-bold mb-3">
+                  Ready to Transform Your Team's Learning?
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-white/90 mb-6 text-lg leading-relaxed">
                   Our team is ready to help you understand how our India-focused content can benefit your organization.
                 </p>
                 <Link to="/contact">
-                  <button className="bg-primary text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-primary/90 transition-all shadow-md flex items-center gap-3 group">
+                  <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-lg flex items-center gap-3 mx-auto group">
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                     <span>Request a Call Back</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </Link>
               </div>
-
             </div>
           </div>
 

@@ -121,21 +121,22 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Video Section - Preview */}
+            {/* Right Video Section - Preview (starts from 1:00) */}
             <div className="md:w-1/2 mt-12 md:mt-0 relative group">
               {/* Decorative frame */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
               
               {/* Video container */}
               <div className="relative cursor-pointer" onClick={openModal}>
+                {/* PREVIEW VIDEO - Starts from 1:00 minute */}
                 <video 
                   ref={previewVideoRef}
                   className="rounded-2xl shadow-2xl w-full aspect-video object-cover relative z-10 group-hover:scale-[1.02] transition-transform duration-300"
                   muted
                   playsInline
-                  poster="/assets/about-thumb.jpg"
+                  poster="/assets/preview-thumb.jpg"
                 >
-                  <source src="/assets/about-video.mp4" type="video/mp4" />
+                  <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/about-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
@@ -180,14 +181,14 @@ export default function About() {
               <X className="w-8 h-8" />
             </button>
 
-            {/* Full Video */}
+            {/* FULL VIDEO - Plays from beginning (0:00) */}
             <video
               ref={modalVideoRef}
               className="w-full rounded-2xl shadow-2xl"
               controls
               autoPlay
             >
-              <source src="/assets/about-video.mp4" type="video/mp4" />
+              <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/about-video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

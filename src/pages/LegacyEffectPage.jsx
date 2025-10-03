@@ -96,7 +96,7 @@ export default function LegacyEffectPage() {
             </div>
           </div>
 
-          {/* Video Player - Now Shows Preview */}
+          {/* Video Player - Preview from S3 */}
           <div>
             <div 
               onClick={openVideoModal}
@@ -109,7 +109,7 @@ export default function LegacyEffectPage() {
                 autoPlay
                 playsInline
               >
-                <source src="/assets/Legacy.mp4" type="video/mp4" />
+                <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/Legacy.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent group-hover:from-black/70 transition-all"></div>
               
@@ -240,7 +240,7 @@ export default function LegacyEffectPage() {
                 controls
                 autoPlay
               >
-                <source src="/assets/Legacy.mp4" type="video/mp4" />
+                <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/Legacy.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
