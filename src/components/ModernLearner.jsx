@@ -35,10 +35,10 @@ export default function ModernLearner() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header with Badge */}
         <div className="mb-10 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-3">
+          {/* <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-3">
             <Sparkles className="w-4 h-4" />
             <span>Why us</span>
-          </div>
+          </div> */}
           
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
             Content the <span className="text-primary">Modern-Day Learner</span> Loves

@@ -40,19 +40,19 @@ const Hero = () => {
                   
                   {/* Main Title */}
                   <div className="space-y-1">
-                    <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight drop-shadow-sm">
-                      Actuate Microlearning
+                    <h1 className="text-3x1 lg:text-3x1 text-gray-800 leading-relaxed drop-shadow-sm">
+                      Latest Post
                     </h1>
-                    <h2 className="text-2xl lg:text-3xl font-semibold text-primary leading-tight drop-shadow-sm">
+                    <h2 className="text-2xl lg:text-3xl font-semibold text-black leading-tight drop-shadow-sm">
                       The Legacy Effect
                     </h2>
                   </div>
                   
-                  {/* Description */}
+                  {/* Description
                   <p className="text-sm lg:text-base text-gray-700 leading-relaxed drop-shadow-sm">
                     Transform learning into lasting impact with bite-sized modules 
                     designed to create meaningful change.
-                  </p>
+                  </p> */}
                   
                   {/* CTA Button */}
                   <div className="pt-2 flex justify-end">

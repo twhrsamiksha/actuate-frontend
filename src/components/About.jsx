@@ -1,36 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Play, Sparkles, X, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const previewVideoRef = useRef(null);
   const modalVideoRef = useRef(null);
-
-  // Auto-play preview video from 1:00 to 1:15 on loop
-  useEffect(() => {
-    const video = previewVideoRef.current;
-    if (video) {
-      video.currentTime = 60; // Start at 1:00 minute
-      video.play();
-
-      const handleTimeUpdate = () => {
-        if (video.currentTime >= 75) { // 1:15 = 75 seconds
-          video.currentTime = 60; // Loop back to 1:00
-          video.play();
-        }
-      };
-
-      video.addEventListener('timeupdate', handleTimeUpdate);
-      return () => video.removeEventListener('timeupdate', handleTimeUpdate);
-    }
-  }, []);
 
   const openModal = () => {
     setIsModalOpen(true);
-    if (previewVideoRef.current) {
-      previewVideoRef.current.pause();
-    }
     setTimeout(() => {
       if (modalVideoRef.current) {
         modalVideoRef.current.currentTime = 0;
@@ -41,9 +18,6 @@ export default function About() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    if (previewVideoRef.current) {
-      previewVideoRef.current.play();
-    }
     if (modalVideoRef.current) {
       modalVideoRef.current.pause();
     }
@@ -61,12 +35,6 @@ export default function About() {
             
             {/* Left Content */}
             <div className="md:w-1/2">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                <Sparkles className="w-4 h-4" />
-                <span>About Us</span>
-              </div>
-              
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
                 Actuate <span className="text-primary">Microlearning</span>
               </h2>
@@ -121,24 +89,19 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right Video Section - Preview (starts from 1:00) */}
+            {/* Right GIF Section */}
             <div className="md:w-1/2 mt-12 md:mt-0 relative group">
               {/* Decorative frame */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
               
-              {/* Video container */}
+              {/* GIF container */}
               <div className="relative cursor-pointer" onClick={openModal}>
-                {/* PREVIEW VIDEO - Starts from 1:00 minute */}
-                <video 
-                  ref={previewVideoRef}
+                {/* GIF IMAGE */}
+                <img 
+                  src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/about.gif"
+                  alt="Actuate Microlearning Preview"
                   className="rounded-2xl shadow-2xl w-full aspect-video object-cover relative z-10 group-hover:scale-[1.02] transition-transform duration-300"
-                  muted
-                  playsInline
-                  poster="/assets/preview-thumb.jpg"
-                >
-                  <source src="https://citruslearningsystems.s3.ap-south-1.amazonaws.com/Actuate-frontend/Videos/about-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
                 
                 {/* Play button overlay - Only visible on hover */}
                 <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

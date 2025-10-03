@@ -96,15 +96,15 @@ export default function Courses() {
                     </h3>
                   </div>
                   
-                  {/* Bottom Content - Always Visible */}
+                  Bottom Content - Always Visible
                   <div className="absolute bottom-0 left-0 right-0 p-5 transform translate-y-0 transition-all duration-300">
-                    {/* Course Info */}
-                    <div className="mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Course Info
+                    {/* <div className="mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex items-center gap-4 text-white text-sm mb-2">
                         <span>✓ 20+ Microlessons</span>
                         <span>✓ Video-First</span>
                       </div>
-                    </div>
+                    </div> */} 
                     
                     {/* Explore Button - Now a Link */}
                     <a
@@ -114,7 +114,7 @@ export default function Courses() {
                       className="block w-full bg-primary text-white px-5 py-3 rounded-lg font-semibold text-sm hover:bg-primary/90 hover:shadow-xl transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0"
                     >
                       <div className="flex items-center justify-center gap-2">
-                        <span>Explore Course</span>
+                        <span>Explore Courses</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </a>
