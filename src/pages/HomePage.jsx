@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import LearningVault from "../components/LearningVault";
@@ -7,8 +6,8 @@ import ActuateAdvantage from "../components/ActuateAdvantage";  // ← New
 import Courses from "../components/Courses";
 import Testimonials from "../components/Testimonials";
 import Clients from "../components/Clients";
-import Footer from "../components/Footer";
 import Podcast from "../components/Podcast";
+import CTASection from "../components/CTASection";
 
 export default function App() {
   return (
@@ -22,6 +21,7 @@ export default function App() {
       <Podcast />
       <Testimonials />
       <Clients />
+      <CTASection />
     </div>
   );
 }

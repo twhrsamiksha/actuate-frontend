@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Play, Sparkles, X, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,11 +28,9 @@ export default function About() {
 
   const openModal = () => {
     setIsModalOpen(true);
-    // Pause preview video when modal opens
     if (previewVideoRef.current) {
       previewVideoRef.current.pause();
     }
-    // Play full video from beginning
     setTimeout(() => {
       if (modalVideoRef.current) {
         modalVideoRef.current.currentTime = 0;
@@ -42,11 +41,9 @@ export default function About() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    // Resume preview video
     if (previewVideoRef.current) {
       previewVideoRef.current.play();
     }
-    // Pause modal video
     if (modalVideoRef.current) {
       modalVideoRef.current.pause();
     }
@@ -86,6 +83,7 @@ export default function About() {
                 and facilitators in our learning content.
               </p>
 
+              {/* Buttons */}
               <div className="mt-8 flex flex-wrap gap-4">
                 <button 
                   onClick={openModal}
@@ -95,11 +93,13 @@ export default function About() {
                   <span>View Video</span>
                 </button>
                 
-                {/* Premium Know More Button */}
-                <button className="bg-white text-primary font-semibold px-7 py-3.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-xl">
-                  <span>Know More</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                {/* Premium Know More Button with Link */}
+                <Link to="/why-actuate">
+                  <button className="bg-white text-primary font-semibold px-7 py-3.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-xl">
+                    <span>Know More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </Link>
               </div>
 
               {/* Stats */}

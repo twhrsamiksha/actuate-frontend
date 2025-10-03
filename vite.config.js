@@ -6,10 +6,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/wp-json': {
-        target: 'http://3.6.14.227', // Your WordPress backend
+        target: 'http://3.6.14.227',
         changeOrigin: true,
         secure: false,
       },
     },
   },
 })
+  

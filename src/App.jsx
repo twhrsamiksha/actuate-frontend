@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
 import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
+import WhyActuatePage from "./pages/WhyActuatePage";
+import LegacyEffectPage from "./pages/LegacyEffectPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,6 +38,22 @@ function AnimatedRoutes() {
           element={
             <PageTransition>
               <ContactUs />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/why-actuate" 
+          element={
+            <PageTransition>
+              <WhyActuatePage />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/legacy-effect" 
+          element={
+            <PageTransition>
+              <LegacyEffectPage />
             </PageTransition>
           } 
         />

@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -54,10 +55,12 @@ const Hero = () => {
                   
                   {/* CTA Button - Matching About Section */}
                   <div className="pt-2 flex justify-end">
-                    <button className="bg-primary text-white px-5 py-2.5 md:px-7 md:py-3.5 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center gap-2 group text-sm md:text-base">
-                      <Play size={18} className="group-hover:scale-110 transition-transform md:w-5 md:h-5" />
-                      <span>View Video</span>
-                    </button>
+                    <Link to="/legacy-effect">
+  <button className="bg-primary text-white px-5 py-2.5 md:px-7 md:py-3.5 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center gap-2 group text-sm md:text-base">
+    <Play size={18} className="group-hover:scale-110 transition-transform md:w-5 md:h-5" />
+    <span>View Video</span>
+  </button>
+</Link>
                   </div>
                   
                 </div>
