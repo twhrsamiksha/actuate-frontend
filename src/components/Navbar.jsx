@@ -41,11 +41,10 @@ export default function Navbar() {
     subjects: {
       title: "Blog Subjects",
       items: [
-        { label: "Leadership & Management", link: "https://actuatemicrolearning.com/leadership-management" },
-        { label: "Productivity", link: "https://actuatemicrolearning.com/productivity" },
-        { label: "Business Presentations", link: "https://actuatemicrolearning.com/business-presentations" },
-        { label: "Learning and Development", link: "https://actuatemicrolearning.com/learning-development" },
-        { label: "Sales", link: "https://actuatemicrolearning.com/sales" }
+        { label: "Leadership & Management", link: "https://actuatemicrolearning.com/leadership-management-2-2/" },
+        { label: "Business Presentations", link: "https://actuatemicrolearning.com/business-presentations-2/" },
+        { label: "Learning and Development", link: "https://actuatemicrolearning.com/learning-developement-2/" },
+        { label: "Sales", link: "https://actuatemicrolearning.com/sales-2/" }
       ]
     },
     formats: {
@@ -54,17 +53,17 @@ export default function Navbar() {
         { label: "Videos", link: "https://actuatemicrolearning.com/videos" },
         { label: "Slideshows", link: "https://actuatemicrolearning.com/slideshows" },
         { label: "Infographics", link: "https://actuatemicrolearning.com/infographics" },
-        { label: "Flashcards", link: "https://actuatemicrolearning.com/flashcards" },
+        { label: "Flashcards", link: "https://actuatemicrolearning.com/flash-card/" },
         { label: "Podcasts", link: "https://actuatemicrolearning.com/podcasts" },
-        { label: "Audiobook", link: "https://actuatemicrolearning.com/audiobooks" },
+        { label: "Audiobook", link: "https://actuatemicrolearning.com/audiobook/" },
         { label: "eBooks", link: "https://actuatemicrolearning.com/ebooks" }
       ]
     },
     download: {
       title: "Download",
       items: [
-        { label: "Flash Card", link: "https://actuatemicrolearning.com/flashcard-download" },
-        { label: "Audiobook", link: "https://actuatemicrolearning.com/audiobook-download" }
+        { label: "Flash Card", link: "https://actuatemicrolearning.com/flash-card/" },
+        { label: "Audiobook", link: "https://actuatemicrolearning.com/audiobook/" }
       ]
     }
   };
