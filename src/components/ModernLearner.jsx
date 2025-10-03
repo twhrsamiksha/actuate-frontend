@@ -1,5 +1,6 @@
 import React from "react";
 import { Ruler, Video, Smartphone, Volume2, Sparkles, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const modernFeatures = [
   { 
@@ -66,10 +67,12 @@ export default function ModernLearner() {
             
             {/* Know More Button - Center aligned below image */}
             <div className="flex justify-center mt-20">
-              <button className="bg-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
-                <span>Know More</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              <Link to="/why-actuate">
+                  <button className="bg-white text-primary font-semibold px-7 py-3.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-xl">
+                    <span>Know More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </Link>
             </div>
           </div>
 
