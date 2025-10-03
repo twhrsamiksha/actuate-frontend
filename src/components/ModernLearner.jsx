@@ -66,7 +66,7 @@ export default function ModernLearner() {
             
             {/* Know More Button - Center aligned below image */}
             <div className="flex justify-center mt-20">
-              <button className="bg-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-red-600 hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+              <button className="bg-primary text-white px-7 py-3 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
                 <span>Know More</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>

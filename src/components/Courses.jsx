@@ -82,7 +82,7 @@ export default function Courses() {
                     </div>
                     
                     {/* Explore Button */}
-                    <button className="w-full bg-primary text-white px-5 py-3 rounded-lg font-semibold text-sm hover:bg-red-600 transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
+                    <button className="w-full bg-primary text-white px-5 py-3 rounded-lg font-semibold text-sm hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
                       <span>Explore Course</span>
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </button>

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Play, Sparkles, X } from "lucide-react";
+import { Play, Sparkles, X, ArrowRight } from "lucide-react";
 
 export default function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -70,7 +70,7 @@ export default function About() {
                 <span>About Us</span>
               </div>
               
-              <h2 className="text-3xl md:text-4xl  font-bold text-gray-800 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
                 Actuate <span className="text-primary">Microlearning</span>
               </h2>
               
@@ -89,13 +89,16 @@ export default function About() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <button 
                   onClick={openModal}
-                  className="bg-primary text-white px-7 py-3.5 rounded-lg font-semibold hover:bg-red-600 hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
+                  className="bg-primary text-white px-7 py-3.5 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"
                 >
                   <Play size={20} className="group-hover:scale-110 transition-transform" />
                   <span>View Video</span>
                 </button>
-                <button className="bg-white text-gray-800 px-7 py-3.5 rounded-lg font-semibold border-2 border-gray-300 hover:border-primary hover:text-primary hover:shadow-lg transition-all duration-300">
-                  Know More
+                
+                {/* Premium Know More Button */}
+                <button className="bg-white text-primary font-semibold px-7 py-3.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 group shadow-md hover:shadow-xl">
+                  <span>Know More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
 

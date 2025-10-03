@@ -110,7 +110,6 @@ export default function Blogs() {
         {/* CTA Button */}
         <div className="text-center">
           <button className="bg-white text-primary font-semibold px-8 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
-            <Sparkles className="w-5 h-5" />
             <span>View All Blogs</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>

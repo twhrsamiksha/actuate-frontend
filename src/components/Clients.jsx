@@ -11,10 +11,10 @@ const clientsBySector = {
     "/assets/pharma4.png",
     "/assets/pharma5.png",
     "/assets/pharma6.png",
-    "/assets/Pharma7.png",
+    "/assets/pharma7.png",
   ],
 
-  Automotive, Manufacturing: [
+  "Automotive, Manufacturing": [  // ✅ Fixed - added quotes
     "/assets/auto1.png",
     "/assets/auto2.png",
     "/assets/auto3.png",
@@ -24,7 +24,7 @@ const clientsBySector = {
     "/assets/auto7.png",
   ],
 
-  Consumer_Goods, Durables: [
+  "Consumer Goods, Durables": [  // ✅ Fixed - added quotes
     "/assets/goods1.png",
     "/assets/goods2.png",
     "/assets/goods3.png",
@@ -34,7 +34,7 @@ const clientsBySector = {
     "/assets/goods7.png",
   ],
 
-  IT, ITES, eCommerce, Retail: [
+  "IT, ITES, eCommerce, Retail": [  // ✅ Fixed - added quotes
     "/assets/IT1.png",
     "/assets/IT2.png",
     "/assets/IT3.png",
@@ -44,7 +44,7 @@ const clientsBySector = {
     "/assets/IT7.png",
   ],
 
-  Public_Sector, Petrochemical, Infra: [
+  "Public Sector, Petrochemical, Infra": [  // ✅ Fixed - added quotes
     "/assets/public1.png",
     "/assets/public2.png",
     "/assets/public3.png",
@@ -65,7 +65,6 @@ const clientsBySector = {
     "/assets/others10.png",
     "/assets/others11.png",
   ],
-
 };
 
 export default function Clients() {
@@ -82,30 +81,30 @@ export default function Clients() {
           Trusted by leading organizations across industries
         </p>
 
-        {/* Sector Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {sectors.map((sector) => (
-            <button
-              key={sector}
-              onClick={() => setActiveSector(sector)}
-              className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${
-                activeSector === sector
-                  ? "bg-primary text-white shadow-lg scale-105"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {sector}
-            </button>
-          ))}
-        </div>
+   {/* Sector Tabs */}
+<div className="flex flex-wrap justify-center gap-3 mb-10">
+  {sectors.map((sector) => (
+    <button
+      key={sector}
+      onClick={() => setActiveSector(sector)}
+      className={`px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 ${
+        activeSector === sector
+          ? "bg-primary text-white shadow-lg scale-105"
+          : "bg-white text-gray-600 border-2 border-gray-200 hover:border-primary hover:text-primary hover:shadow-md"
+      }`}
+    >
+      {sector}
+    </button>
+  ))}
+</div>
 
         {/* Logo Slider for Active Sector */}
         <div className="relative">
           <Swiper
-            key={activeSector} // Re-initialize on sector change
+            key={activeSector}
             modules={[Autoplay]}
             autoplay={{
-              delay: 2500,
+              delay: 1500,
               disableOnInteraction: false,
             }}
             loop={true}
@@ -140,7 +139,7 @@ export default function Clients() {
         <div className="text-center mt-8">
           <div className="inline-block bg-gray-100 px-6 py-3 rounded-full">
             <span className="text-gray-600 text-sm">
-              Serving <span className="font-bold text-primary">{clientsBySector[activeSector].length}+</span> leading {activeSector.toLowerCase()} companies
+              Serving <span className="font-bold text-red-500">{clientsBySector[activeSector].length}+</span> leading {activeSector.toLowerCase()} companies
             </span>
           </div>
         </div>

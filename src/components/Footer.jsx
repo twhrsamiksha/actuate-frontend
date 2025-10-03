@@ -19,12 +19,10 @@ export default function Footer() {
                 <p className="text-lg font-bold">Have questions? We're here to help!</p>
               </div>
               <Link to="/contact">
-  <button className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-red-600 hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-xl group">
-    <span>Request a demo</span>
-    <div className="bg-white rounded-full p-1.5 group-hover:translate-x-1 transition-transform">
-      <ArrowRight className="w-4 h-4 text-primary" />
-    </div>
-  </button>
+ <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+      <span>Request a demo</span>
+      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+    </button>
 </Link>
             </div>
           </div>
