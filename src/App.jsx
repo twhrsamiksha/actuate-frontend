@@ -8,6 +8,10 @@ import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
 import WhyActuatePage from "./pages/WhyActuatePage";
 import LegacyEffectPage from "./pages/LegacyEffectPage";
+import CourseCataloguePage from "./pages/CourseCataloguePage";
+import IndianAudiencePage from "./pages/IndianAudiencePage";
+import ROIPage from "./pages/ROIPage";
+import ActuateAbout from "./pages/ActuateAbout";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -54,6 +58,38 @@ function AnimatedRoutes() {
           element={
             <PageTransition>
               <LegacyEffectPage />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/course-catalogue" 
+          element={
+            <PageTransition>
+              <CourseCataloguePage />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/indian-audience" 
+          element={
+            <PageTransition>
+              <IndianAudiencePage />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/roi" 
+          element={
+            <PageTransition>
+              <ROIPage />
+            </PageTransition>
+          } 
+        />
+        <Route 
+          path="/actuate-about" 
+          element={
+            <PageTransition>
+              <ActuateAbout />
             </PageTransition>
           } 
         />

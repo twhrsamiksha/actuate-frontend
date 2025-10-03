@@ -2,16 +2,41 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const courses = [
-  { title: "Soft Skills", img: "/assets/course1.png" },
-  { title: "Leadership Skills", img: "/assets/course2.jpg" },
-  { title: "Technical Skills", img: "/assets/course3.jpg" },
-  { title: "Cognitive Skills", img: "/assets/course4.jpg" },
-  { title: "HR and Compliance", img: "/assets/course5.jpg" },
-  { title: "Digital Skills", img: "/assets/course6.jpg" }
+  { 
+    title: "Soft Skills", 
+    img: "/assets/course1.png",
+    link: "https://actuatemicrolearning.com/soft-skills"
+  },
+  { 
+    title: "Leadership Skills", 
+    img: "/assets/course2.jpg",
+    link: "https://actuatemicrolearning.com/leadership-skills"
+  },
+  { 
+    title: "Technical Skills", 
+    img: "/assets/course3.jpg",
+    link: "https://actuatemicrolearning.com/technical-skills"
+  },
+  { 
+    title: "Cognitive Skills", 
+    img: "/assets/course4.jpg",
+    link: "https://actuatemicrolearning.com/cognitive-skills"
+  },
+  { 
+    title: "HR and Compliance", 
+    img: "/assets/course5.jpg",
+    link: "https://actuatemicrolearning.com/hr-compliance"
+  },
+  { 
+    title: "Digital Skills", 
+    img: "/assets/course6.jpg",
+    link: "https://actuatemicrolearning.com/digital-skills"
+  }
 ];
 
 export default function Courses() {
@@ -81,11 +106,18 @@ export default function Courses() {
                       </div>
                     </div>
                     
-                    {/* Explore Button */}
-                    <button className="w-full bg-primary text-white px-5 py-3 rounded-lg font-semibold text-sm hover:bg-primary/90 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group/btn shadow-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
-                      <span>Explore Course</span>
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
+                    {/* Explore Button - Now a Link */}
+                    <a
+                      href={course.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-primary text-white px-5 py-3 rounded-lg font-semibold text-sm hover:bg-primary/90 hover:shadow-xl transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0"
+                    >
+                      <div className="flex items-center justify-center gap-2">
+                        <span>Explore Course</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </a>
                   </div>
                   
                   {/* Number Badge */}
@@ -101,10 +133,12 @@ export default function Courses() {
 
         {/* View All Button */}
         <div className="text-center mt-8">
-          <button className="bg-white text-primary font-semibold px-8 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
-            <span>View All Courses</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          <Link to="/course-catalogue">
+            <button className="bg-white text-primary font-semibold px-8 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
+              <span>View Our Catalogue</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

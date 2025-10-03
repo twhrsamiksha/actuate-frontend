@@ -1,118 +1,99 @@
 import React from "react";
-import { BookOpen, Clock, Sparkles, ArrowRight, Calendar } from "lucide-react";
+import { Mic, Download, Sparkles, ArrowRight } from "lucide-react";
 
-const blogs = [
-  {
-    title: "Leadership in the Digital Age",
-    readTime: "8 min read",
-    description: "Learn how modern leaders are adapting to digital transformation.",
-    image: "/assets/podcast1.png",
-    date: "Oct 15, 2025"
-  },
-  {
-    title: "Building High-Performance Teams",
-    readTime: "12 min read",
-    description: "Strategies to create and manage successful teams in any industry.",
-    image: "/assets/podcast2.jpg",
-    date: "Oct 10, 2025"
-  },
-  {
-    title: "The Art of Effective Communication",
-    readTime: "6 min read",
-    description: "Master the skills that drive meaningful workplace conversations.",
-    image: "/assets/podcast3.png",
-    date: "Oct 5, 2025"
-  },
-  {
-    title: "Innovation & Creative Thinking",
-    readTime: "10 min read",
-    description: "Unlock your creative potential and drive innovation at work.",
-    image: "/assets/podcast4.jpg",
-    date: "Sep 28, 2025"
-  }
-];
-
-export default function Blogs() {
+export default function Podcast() {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-16 relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
+        
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-3">
-            <BookOpen className="w-4 h-4" />
-            <span>Insights & Articles</span>
+            <Mic className="w-4 h-4" />
+            <span>Latest Podcast</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-              Discover Our <span className="text-primary">Blogs</span>
+            Download Our <span className="text-primary">Latest Podcast</span>
           </h2>
           
           <div className="w-20 h-1 bg-primary rounded-full mx-auto mb-4"></div>
-          
-          <p className="text-gray-600 text-base max-w-2xl mx-auto">
-            Explore our blogs to elevate your learning and development journey.
-          </p>
         </div>
 
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          {blogs.map((blog, i) => (
-            <div 
-              key={i}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-gray-100"
-            >
-              <div className="flex flex-col sm:flex-row">
-                {/* Image Section */}
-                <div className="sm:w-48 h-48 sm:h-auto relative overflow-hidden flex-shrink-0">
-                  <img 
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  
-                  {/* Read Time Badge */}
-                  <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-xs font-semibold text-gray-800">{blog.readTime}</span>
+        {/* Podcast Featured Card */}
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+            <div className="grid md:grid-cols-2 gap-0">
+              
+              {/* Image/Audio Visual */}
+              <div className="relative bg-gradient-to-br from-primary/20 to-primary/5 p-12 flex items-center justify-center">
+                <div className="text-center space-y-6">
+                  {/* Podcast Icon */}
+                  <div className="inline-flex items-center justify-center w-24 h-24 bg-white rounded-2xl shadow-lg">
+                    <Mic className="w-12 h-12 text-primary" />
                   </div>
+                  
+                  {/* Audio Waves Animation (Optional visual) */}
+                  <div className="flex items-center justify-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <div 
+                        key={i}
+                        className="w-1.5 bg-primary rounded-full animate-pulse"
+                        style={{
+                          height: `${Math.random() * 40 + 20}px`,
+                          animationDelay: `${i * 0.1}s`
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-600 font-semibold">
+                    Listen & Learn
+                  </p>
                 </div>
 
-                {/* Content Section */}
-                <div className="flex-1 p-6">
-                  {/* Date */}
-                  <div className="flex items-center gap-1.5 text-gray-500 text-xs mb-2">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{blog.date}</span>
-                  </div>
-                  
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors duration-300">
-                    {blog.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    {blog.description}
-                  </p>
-                  
-                  <button className="text-primary font-semibold text-sm flex items-center gap-2 group/btn">
-                    <span>Read More</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </button>
+                {/* Decorative elements */}
+                <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                <div className="absolute bottom-4 left-4 w-16 h-16 bg-primary/20 rounded-full blur-xl"></div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 sm:p-10 flex flex-col justify-center">
+                <div className="flex items-center gap-2 text-primary mb-4">
+                  <Sparkles className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Featured Episode</span>
                 </div>
+
+                <h3 className="text-2xl sm:text-3xl font-bold text-secondary mb-4 leading-tight">
+                  Harnessing Stress to Boost Team Member Productivity
+                </h3>
+
+                <p className="text-primary font-semibold mb-4 text-lg">
+                  Lessons from Neuroscience
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  In this podcast, we explore what neuroscience teaches us about the kind of stress that can aid performance, and how managers can use this knowledge to help their team members climb the productivity curve.
+                </p>
+
+                <a 
+                  href="https://actuatemicrolearning.com/harnessing-stress-to-boost-team-member-productivity/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <button className="bg-primary text-white px-6 py-3.5 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 flex items-center gap-3 shadow-md hover:shadow-lg group">
+                    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                    <span>Download Podcast</span>
+                  </button>
+                </a>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center">
-          <button className="bg-white text-primary font-semibold px-8 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
-            <span>View All Blogs</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </div>
         </div>
       </div>
     </section>

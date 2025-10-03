@@ -17,8 +17,8 @@ export default function App() {
       <ModernLearner />      {/* ← Replaces Features */}
       <ActuateAdvantage />   {/* ← New separate section */}
       <Courses />
-      <LearningVault />
       <Podcast />
+      <LearningVault />
       <Testimonials />
       <Clients />
       <CTASection />

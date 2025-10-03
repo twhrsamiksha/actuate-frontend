@@ -6,18 +6,17 @@ export default defineConfig(({ command }) => {
 
   return {
     plugins: [react()],
-    base: isDev ? '/' : '/', // adjust if deploying in subfolder
+    // 👇 Important: set base to /app/ for production
+    base: isDev ? '/' : '/app/',
     server: isDev
       ? {
           host: true, // allow external connections
           port: 5173,
           strictPort: true,
-          allowedHosts: [
-            'actuatemicrolearning.com'
-          ],
+          allowedHosts: ['actuatemicrolearning.com'],
           proxy: {
             '/wp-json': {
-              target: 'https://actuatemicrolearning.com', // WordPress backend
+              target: 'https://actuatemicrolearning.com',
               changeOrigin: true,
               secure: false,
             },

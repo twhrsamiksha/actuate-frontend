@@ -2,12 +2,36 @@ import React from "react";
 import { BookOpen, Video, Presentation, BarChart3, Mic, CreditCard, Sparkles, ArrowRight } from "lucide-react";
 
 const contentTypes = [
-  { icon: BookOpen, label: "eBooks" },
-  { icon: Video, label: "Videos" },
-  { icon: Presentation, label: "Slideshows" },
-  { icon: BarChart3, label: "Infographics" },
-  { icon: Mic, label: "Podcasts" },
-  { icon: CreditCard, label: "Flashcards" },
+  { 
+    icon: BookOpen, 
+    label: "eBooks",
+    link: "https://actuatemicrolearning.com/ebooks" 
+  },
+  { 
+    icon: Video, 
+    label: "Videos",
+    link: "https://actuatemicrolearning.com/videos" 
+  },
+  { 
+    icon: Presentation, 
+    label: "Slideshows",
+    link: "https://actuatemicrolearning.com/slideshows" 
+  },
+  { 
+    icon: BarChart3, 
+    label: "Infographics",
+    link: "https://actuatemicrolearning.com/infographics" 
+  },
+  { 
+    icon: Mic, 
+    label: "Podcasts",
+    link: "https://actuatemicrolearning.com/podcasts" 
+  },
+  { 
+    icon: CreditCard, 
+    label: "Flashcards",
+    link: "https://actuatemicrolearning.com/flashcards" 
+  },
 ];
 
 export default function LearningVault() {
@@ -36,11 +60,14 @@ export default function LearningVault() {
           </p>
         </div>
 
-        {/* Icon Grid - Premium Vibrant Cards */}
+        {/* Icon Grid - Premium Vibrant Cards with Links */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-10">
           {contentTypes.map((item, i) => (
-            <div
+            <a
               key={i}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-br from-primary to-primary/90 rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 group cursor-pointer relative overflow-hidden"
             >
               {/* Shine effect on hover */}
@@ -57,17 +84,26 @@ export default function LearningVault() {
 
               {/* Decorative circle */}
               <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-            </div>
+            </a>
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-10">
-          <button className="bg-white text-primary font-semibold px-8 py-3.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
-            <span>View All Content</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
-        </div>
+        {/* View All Button
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-4">
+            Explore more learning content and resources
+          </p>
+          <a 
+            href="https://actuatemicrolearning.com/resources" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-white text-primary font-semibold px-8 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
+              <span>View All Resources</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+          </a>
+        </div> */}
       </div>
     </section>
   );

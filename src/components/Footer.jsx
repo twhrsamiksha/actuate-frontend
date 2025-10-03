@@ -81,11 +81,13 @@ export default function Footer() {
                 Contact Us
               </h4>
               <div className="text-sm text-gray-400 space-y-1">
-                <p>B-203, Shivai Industrial Estate, Saki Naka,</p>
-                <p>Andheri (E), Mumbai, Maharashtra - 400072</p>
+                <p>H.K. Data Services, Unit No. 81, Plot No. 14,</p>
+                <p>Marol Cooperative Industrial Estate Rd,</p>
+                <p>off Andheri - Kurla Road, Marol, Andheri East,</p>
+                <p>Mumbai, Maharashtra 400059</p>
                 <div className="flex flex-wrap gap-4 mt-3">
                   <a href="tel:+919167077114" className="hover:text-primary transition-colors font-semibold">+91 9167077114</a>
-                  <a href="mailto:joslita@actuatemicrolearn.com" className="hover:text-primary transition-colors font-semibold">joslita@actuatemicrolearn.com</a>
+                  <a href="mailto:candice@actuatemicrolearning.com" className="hover:text-primary transition-colors font-semibold">candice@actuatemicrolearning.com</a>
                 </div>
               </div>
             </div>

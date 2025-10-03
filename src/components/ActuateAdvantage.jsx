@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Video, Globe, MessageCircle, BookOpen, Volume2, ThumbsUp, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const advantages = [
   { 
@@ -120,10 +121,12 @@ export default function ActuateAdvantage() {
         </div>
 
         <div className="text-center mt-8">
-          <button className="bg-white text-primary font-semibold px-6 py-2.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
-            <span>Know More</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          <Link to="/why-actuate">
+  <button className="bg-white text-primary font-semibold px-6 py-2.5 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto group shadow-lg hover:shadow-xl">
+    <span>Know More</span>
+    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+  </button>
+</Link>
         </div>
       </div>
 
