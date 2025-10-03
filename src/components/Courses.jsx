@@ -9,32 +9,32 @@ import "swiper/css/pagination";
 const courses = [
   { 
     title: "Soft Skills", 
-    img: "/assets/course1.png",
+    img: "/app/assets/course1.png",
     link: "https://actuatemicrolearning.com/soft-skills"
   },
   { 
     title: "Leadership Skills", 
-    img: "/assets/course2.jpg",
+    img: "/app/assets/course2.jpg",
     link: "https://actuatemicrolearning.com/leadership-skills"
   },
   { 
     title: "Technical Skills", 
-    img: "/assets/course3.jpg",
+    img: "/app/assets/course3.jpg",
     link: "https://actuatemicrolearning.com/technical-skills"
   },
   { 
     title: "Cognitive Skills", 
-    img: "/assets/course4.jpg",
+    img: "/app/assets/course4.jpg",
     link: "https://actuatemicrolearning.com/cognitive-skills"
   },
   { 
     title: "HR and Compliance", 
-    img: "/assets/course5.jpg",
+    img: "/app/assets/course5.jpg",
     link: "https://actuatemicrolearning.com/hr-compliance"
   },
   { 
     title: "Digital Skills", 
-    img: "/assets/course6.jpg",
+    img: "/app/assets/course6.jpg",
     link: "https://actuatemicrolearning.com/digital-skills"
   }
 ];

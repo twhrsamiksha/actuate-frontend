@@ -10,25 +10,25 @@ const testimonials = [
     text: "Actuate's content is 100 times better than other Indian companies' content. Foreign companies' content do not allow personalization for Indian learners.",
     author: "Supriya Kamble",
     company: "Corporate HR Manager",
-    image: "/assets/testimonials/01. Supriya Kamble.png"
+    image: "/app/assets/testimonials/01. Supriya Kamble.png"
   },
   {
     text: "...international standards... fun filled and entertaining... keep learners hooked... wonderful... innovative.",
     author: "Amitabh Bhagchandani",
     company: "eLearning Specialist",
-    image: "/assets/testimonials/02. Amitabh Bhagchandani.png"
+    image: "/app/assets/testimonials/02. Amitabh Bhagchandani.png"
   },
   {
     text: "There have been many service provider today into this space but Actuate offerings stand apart in terms of their repository and their innovative presentation of their content.",
     author: "Anil Nair",
     company: "Head Talent Management",
-    image: "/assets/testimonials/03. Anil Nair.png"
+    image: "/app/assets/testimonials/03. Anil Nair.png"
   },
   {
     text: "Among the other players... national and international... the relevance of courses and approach... eased our decision making.",
     author: "Ajitha S",
     company: "HR Corporate",
-    image: "/assets/testimonials/04. Ajitha S.png"
+    image: "/app/assets/testimonials/04. Ajitha S.png"
   }
 ];
 
@@ -90,7 +90,7 @@ export default function Testimonials() {
         <div 
           className="rounded-3xl p-10 md:p-12 relative shadow-2xl"
           style={{
-            backgroundImage: 'url(/assets/testimonials-bg.png)',
+            backgroundImage: 'url(/app/assets/testimonials-bg.png)',
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto',
             backgroundColor: '#f9fafb',

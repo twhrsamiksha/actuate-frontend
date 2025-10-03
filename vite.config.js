@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [react()],
     // 👇 Important: set base to /app/ for production
-    base: isDev ? '/' : '/app/',
+    base: '/app/',
     server: isDev
       ? {
           host: true, // allow external connections

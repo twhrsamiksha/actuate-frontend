@@ -47,7 +47,7 @@ export default function CourseCataloguePage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/assets/catalogue.png" 
+                src="/app/assets/catalogue.png" 
                 alt="Course Catalogue" 
                 className="w-full h-auto aspect-video object-cover"
               />

@@ -13,7 +13,7 @@ export default function CTASection() {
         <div className="bg-primary rounded-3xl p-8 shadow-2xl">
           <div className="bg-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-800 mb-6 md:mb-0">
-              <img src="/assets/red-logo.png" alt="ACTUATE" className="h-10 mb-3" />
+              <img src="/app/assets/red-logo.png" alt="ACTUATE" className="h-10 mb-3" />
               <p className="text-lg font-bold">Have questions? We're here to help!</p>
             </div>
             <Link to="/contact">

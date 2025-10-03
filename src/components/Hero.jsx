@@ -25,7 +25,7 @@ const Hero = () => {
         <SwiperSlide>
           <div className="relative w-full h-full">
             <img 
-              src="/assets/banner1.png" 
+              src="/app/assets/banner1.png" 
               alt="Actuate Microlearning Banner" 
               className="w-full h-full object-cover"
             />

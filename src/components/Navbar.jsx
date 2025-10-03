@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-center items-center">
           <Link to="/">
             <img 
-              src="/assets/logo.png" 
+              src="/app/assets/logo.png" 
               alt="ACTUATE" 
               className="h-10 sm:h-12 drop-shadow-lg hover:scale-105 transition-transform duration-300"
             />
@@ -101,7 +101,7 @@ export default function Navbar() {
             {isScrolled && (
               <Link to="/">
                 <img 
-                  src="/assets/red-logo.png" 
+                  src="/app/assets/red-logo.png" 
                   alt="ACTUATE" 
                   className="h-7 sm:h-8 hover:scale-105 transition-transform duration-300"
                 />

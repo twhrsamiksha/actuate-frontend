@@ -59,7 +59,7 @@ export default function ModernLearner() {
               <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl scale-75"></div>
               
               <img 
-                src="/assets/modern-learner.png" 
+                src="/app/assets/modern-learner.png" 
                 alt="Modern learner illustration" 
                 className="w-full max-w-md object-contain relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />

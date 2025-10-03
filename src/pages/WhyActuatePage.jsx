@@ -10,7 +10,7 @@ const WhyActuatePage = () => {
       description: "Our content has a global orientation, drawing upon research and case studies from the best sources across the world. Your employees get content that has a global orientation, is based on sound research and can help them 'be the best possible version of themselves'.",
       bottomLine: "Provide your employees with world-class content that will earn you their gratitude and praise.",
       action: { text: "Know More", link: "/indian-audience", type: "secondary" },
-      image: "/assets/W2.png"
+      image: "/app/assets/W2.png"
     },
     {
       icon: MapPin,
@@ -19,7 +19,7 @@ const WhyActuatePage = () => {
       features: ["Indian scenarios", "Indian narrators/actors", "Indian accents"],
       bottomLine: "eLearning that is relatable, relevant and will thus be rated highly by your employees.",
       action: { text: "Preview Content", link: "/indian-audience", type: "secondary" },
-      image: "/assets/W11.png"
+      image: "/app/assets/W11.png"
     },
     {
       icon: Smartphone,
@@ -28,7 +28,7 @@ const WhyActuatePage = () => {
       bottomLine: "Obtain content that is optimized for the modern-day learner!",
       action: { text: "Request a Demo", link: "/contact", type: "primary" },
       secondaryAction: { text: "Preview", link: "/indian-audience" },
-      image: "/assets/W3.png"
+      image: "/app/assets/W3.png"
     },
     {
       icon: Users,
@@ -36,7 +36,7 @@ const WhyActuatePage = () => {
       description: "Great content is just the start. We handle the marketing aspect for you, year-round, helping ensure that your learners are consistently engaging with the content we provide.",
       bottomLine: "Your eLearning investment deserves a high RoI. We help you deliver it.",
       action: { text: "Know More", link: "/roi", type: "secondary" },
-      image: "/assets/W4.png"
+      image: "/app/assets/W4.png"
     },
     {
       icon: Award,
@@ -44,7 +44,7 @@ const WhyActuatePage = () => {
       description: "Our clients say that we are the best that they've seen in India. We'll never stop trying to get better than what we were yesterday.",
       bottomLine: "It's a relatively fail-safe investment for you.",
       action: { text: "Request a Call Back", link: "/contact", type: "primary" },
-      image: "/assets/W5.png"
+      image: "/app/assets/W5.png"
     }
   ];
 
